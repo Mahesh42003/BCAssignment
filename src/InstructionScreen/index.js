@@ -3,15 +3,7 @@ import {Link} from 'react-router-dom'
 import './index.css'
 
 class InstructionScreen extends Component {
-  backButton = () => {
-    const {history} = this.props
-    history.push('/IntroScreen')
-  }
-
-  playButton = () => {
-    const {history} = this.props
-    history.push('/ActivityScreen')
-  }
+  
 
   render() {
     return (
@@ -20,7 +12,7 @@ class InstructionScreen extends Component {
             <Link to="/IntroScreen">
           <img
             src="https://i.im.ge/2024/05/25/KauH1Y.Group-156back.png"
-            className="back-button"
+            className="back-button" alt="back"
             
           />
          </Link>
@@ -28,7 +20,7 @@ class InstructionScreen extends Component {
             {}{' '}
             <img
               src="https://i.im.ge/2024/05/25/KauNoc.Group-154banana.png"
-              className="banana-size"
+              className="banana-size" alt="banana1"
             />
           </h1>
         </div>
@@ -36,7 +28,7 @@ class InstructionScreen extends Component {
           <div className="each-card-item">
             <img
               src="https://i.im.ge/2024/05/25/KaFEep.cardPinkCard.png"
-              className="size-of-blue"
+              className="size-of-blue" alt="pinkcard1"
             />
             <div className="flexing-cards">
               <button className="one-button">01</button>
@@ -49,7 +41,7 @@ class InstructionScreen extends Component {
           <div className="each-card-item">
             <img
               src="https://i.im.ge/2024/05/25/KaF3DP.cardbluecard.png"
-              className="size-of-blue"
+              className="size-of-blue" alt="bluecard1"
             />
             <div className="flexing-cards">
               <button className="second-button">02</button>
@@ -62,7 +54,7 @@ class InstructionScreen extends Component {
           <div className="each-card-item">
             <img
               src="https://i.im.ge/2024/05/25/KaFZr0.Group-157blueandpink.png"
-              className="size-of-blue third-image-size"
+              className="size-of-blue third-image-size" alt="blueandpink"
             />
             <div className="flexing-cards">
               <button className="third-button">03</button>
@@ -80,6 +72,6 @@ class InstructionScreen extends Component {
         </div>
       </div>
     )
-  }
+  } 
 }
 export default InstructionScreen

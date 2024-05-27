@@ -10,11 +10,11 @@ const InsideActivityScreen = props => {
     <li className="each-list">
       {checking1[o] ? (  
         <div className="background-of-fruit">
-          <img src={data[o].image_link} className="size-of-fruit" />
+          <img src={data[o].image_link} className="size-of-fruit" alt={checking1[o]}/>
         </div>
       ) : ( 
         <img
-          src="https://i.im.ge/2024/05/25/KaFEep.cardPinkCard.png"
+          src="https://i.im.ge/2024/05/25/KaFEep.cardPinkCard.png" alt="pinkcard1"
           onClick={clickingPinkImage}
         />
       )}

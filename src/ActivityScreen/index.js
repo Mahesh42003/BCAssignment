@@ -91,11 +91,9 @@ class ActivityScreen extends Component {
   }
 
   changechecking = (k, l, i) => {
-    const {values, checking, count, m, n, alphaChecking, imgIndex} = this.state
-    const lengthOfValues = values.length - 1
-    const filtering = checking.filter(each => each !== true)
-    const filtering1 = alphaChecking.filter(each => each !== true)
-    const filtering2 = values.slice(0, lengthOfValues)
+    const {values} = this.state
+    
+    
     const changing = values.map(each => {
       if (each === k) {
         return true
@@ -111,24 +109,11 @@ class ActivityScreen extends Component {
   changealphachecking = (k, l) => {
     const {
       values,
-      alphaChecking,
-      n,
-      count,
-      m,
-      checking,
-      firstData,
-      secondData,
-      alphaIndex,
-      percentage,
+      
+     
     } = this.state
-
-    const lengthOfValues = values.length - 1
-    const filtering = checking.filter(each => each !== true)
-    const filtering1 = alphaChecking.filter(each => each !== true)
-    const filtering2 = values.slice(0, lengthOfValues)
-    const filtering3 = firstData.filter(
-      each => each.name[0] !== secondData[k].alphabet,
-    )
+ 
+   
     const changing = values.map(each => {
       if (each === k) {
         return true
@@ -144,7 +129,7 @@ class ActivityScreen extends Component {
   }
 
   RetryButton = () => {
-    const {percentage} = this.state
+    
     FruitsData.sort(() => Math.random() - 0.5)
     FruitAlphabets.sort(() => Math.random() - 0.5)
     this.setState({
@@ -162,10 +147,7 @@ class ActivityScreen extends Component {
     })
   }
 
-  backButton = () => {
-    const {history} = this.props
-    history.replace('/Instruction Screen')
-  }
+  
 
   changingnewOne = () => {
     const {
@@ -174,7 +156,7 @@ class ActivityScreen extends Component {
       checking,
       alphaChecking,
       values,
-      count,
+      
       firstData,
       secondData,
     } = this.state
@@ -209,7 +191,7 @@ class ActivityScreen extends Component {
       imgIndex,
       alphaIndex,
       percentage,
-      count1,
+      
     } = this.state
 
    
@@ -221,8 +203,8 @@ class ActivityScreen extends Component {
           </h1>
           <button onClick={this.RetryButton} className="margin-to-ok">
             Play Again
-          </button>
-        </div>
+          </button> 
+        </div> 
       )
     }
     if (m !== n && count === 2) {
@@ -232,7 +214,7 @@ class ActivityScreen extends Component {
           <div className="flexing-of-two-images">
             <img
               src={firstData[imgIndex].image_link}
-              className="background-of-fruit"
+              className="background-of-fruit" alt={firstData[imgIndex].image_link}
             />
             <div className="background-of-fruit">
               <h1 className="heading">{secondData[alphaIndex].alphabet}</h1>
@@ -251,7 +233,7 @@ class ActivityScreen extends Component {
           <div className="flexing-of-two-images">
             <img
               src={firstData[imgIndex].image_link}
-              className="background-of-fruit"
+              className="background-of-fruit" alt={firstData[imgIndex].image_link}
             />
             <div className="background-of-fruit">
               <h1 className="heading">{secondData[alphaIndex].alphabet}</h1>
@@ -269,7 +251,7 @@ class ActivityScreen extends Component {
         <Link to="/Instruction Screen">
           <img
             src="https://i.im.ge/2024/05/25/KauH1Y.Group-156back.png"
-            className="back-button"
+            className="back-button" alt="Start"
            
           />
           </Link>
@@ -285,10 +267,10 @@ class ActivityScreen extends Component {
             />
             <img
               src="https://i.im.ge/2024/05/25/KauNoc.Group-154banana.png"
-              className="banana-size1"
-            />
+              className="banana-size1" alt="banana"
+            /> 
           </div>
-        </div>
+        </div> 
         <div className="flexing-of-both-blue-pink">
           <ul className="unordered-list">
             {values.map(each => (

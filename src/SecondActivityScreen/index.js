@@ -15,7 +15,7 @@ const SecondActivityScreen = props => {
       ) : (
         <img
           src="https://i.im.ge/2024/05/25/KaF3DP.cardbluecard.png"
-          onClick={clicking}
+          onClick={clicking} alt="blue card"
         />
       )}
     </li>
